@@ -1,0 +1,582 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  padding: 10px 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin: 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a {
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #00bcd4;
+}
+/* active state in light mode */
+nav a.active {
+  color: #00bcd4;
+}
+/* active state in dark mode */
+.dark-mode nav ul li a.active {
+  color: #00bcd4;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+}
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+/* optional: slight shadow to stand out in both modes */
+.dark-mode .hero-name::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 400px;
+  background: linear-gradient(90deg, #00bcd4, #ff4081, #00bcd4);
+  margin: 10px auto 0;
+  border-radius: 999px;
+}
+
+/* sections header color */
+.about h2,
+.projects h2,
+.contact-section h2 {
+  color: #0c92a4;
+}
+.dark-mode .hero strong {
+  color: #00bcd4;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: normal;
+  font-style: italic;
+}
+/* light tmode -only apply when .darkmode class is not on body */
+body:not(.dark-mode) strong {
+  font-style: italic;
+  display: inline-block;
+  margin-top: 10px;
+}
+/* showing screen after click on nav items */
+#about,
+#projects,
+#contact {
+  scroll-margin-top: 200px;
+}
+/* theme toggle for mobile */
+.toggle-mobile {
+  display: none;
+}
+/* only show toggle in hamburger on small screen */
+@media (max-width: 768px) {
+  .theme-toggle.desktop-toggle {
+    /* hide right corner toggle */
+    display: none;
+  }
+  .toggle-mobile {
+    /* show toggle inside menu */
+    display: block;
+    padding: 10px 20px;
+  }
+  .toggle-mobile .modetoggle-btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+/* light or dark mode toggle */
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.modetoggle-btn {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.mode-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  background-size: cover;
+}
+.dark-mode .modetoggle-btn {
+  background-color: #444;
+}
+.dark-mode .mode-icon {
+  background-image: url("images/moon.svg");
+}
+.light-mode .mode-icon {
+  background-image: url("images/moonoff.svg");
+}
+.dark-mode #modeText {
+  content: "Light Mode";
+}
+
+/* js ka css toggle k liye*/
+.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+.dark-mode nav {
+  background-color: #111;
+}
+.dark-mode footer {
+  background-color: #111;
+}
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+/* resposive style */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    margin-top: 10px;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+  }
+}
+/* hero section */
+.hero {
+  height: 90vh;
+  background-color: (#ffffff);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 20px 20px;
+}
+body.dark-mode .hero {
+  background-color: #111 !important;
+  color: white !important;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.btn {
+  background-color: #0c92a4;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: nono;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color: #555;
+}
+/* hero section styling for screen size */
+@media (max-width: 780px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 10px 20px;
+  }
+}
+/* horizontal divider betw section */
+.divider {
+  border: none;
+  height: 1px;
+  /* light mode defualt */
+  background-color: black;
+  margin: 50px auto;
+  width: 80%;
+  opacity: 0.6;
+}
+/* darkmode divider */
+.dark-mode .divider {
+  background-color: white;
+}
+
+/* modal css & js */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: flex; /* Fix: override display:none */
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+.modal-content input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+input:focus,
+textarea:focus {
+  outline: none; /* remove default thick outline */
+  border: 2px solid #00bcd4; /* slim custom border (blue in this case) */
+  box-shadow: 0 0 5px rgba(17, 32, 48, 0.5); /* optional subtle glow */
+  transition: all 0.2s ease-in-out;
+}
+.modal-content form textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+  min-width: 0;
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /*Ensure padding doesn't push size*/
+}
+.modal-content button {
+  display: block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input.error,
+textarea.error {
+  border: 2px solid red;
+}
+
+/* Popup Message Styling */
+#popupMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e0f7fa;
+    border-left: 5px solid #0097a7;
+    color: #004d40;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }  
+
+/* Show popup */
+.popup-visible {
+  display: block !important; /* Force visibility */
+}
+
+/* global reset for button to ensure element never overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.modal-content button:hover {
+  background-color: #0097a7;
+}
+.close {
+  color: #333;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* darkmode modal */
+body.dark-mode .modal-content {
+  background-color: #fff;
+  color: #fff;
+}
+
+/* polishing porfolio  or smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* css for contact scroll section for other networks */
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.contact-section p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.social-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  border: 1px solid var(--text-color);
+  padding: 10px 15px;
+  transition: 0.3s ease;
+}
+.social-links a:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+/* css for about section see more button */
+.about {
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+#moreText {
+  display: none;
+}
+#seemorelesstoggleBtn {
+  margin-top: 1 rem;
+  padding: 0.5rem;
+  background-color: #0c92a4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transform: background-color 0.3s ease;
+}
+#seemorelesstoggleBtn:hover {
+  background-color: #555;
+}
+
+/* work section styling */
+
+.work-gallery {
+  padding: 30px;
+  text-align: center;
+}
+.work-gallery h2 {
+  color: #0c92a4;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.project-item {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.project-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.project-item:hover img {
+  transform: scale(1.05);
+  filter: blur(2px) brightness(0.7);
+}
+.project-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  width: 80%;
+}
+.project-item:hover .project-info {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+/* dark mode main thora or blur */
+body.dark-mode .project-item:hover img {
+  filter: blur(2px) brightness(0.6);
+}
+body.dark-mode .project-info {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* modal of view my work detail */
+.modall {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modall-content {
+  background-color: inherit;
+  position: relative;
+  max-width: 700px;
+  width: 90%;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+.dark-mode .modall-content {
+  background-color: inherit;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+.modall-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+.modall-description {
+  margin-top: 15px;
+  color: white;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+#modallImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+#modallTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: inherit;
+}
+#modallText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: inherit;
+}

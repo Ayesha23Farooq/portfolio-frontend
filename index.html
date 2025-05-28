@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" class="css" />
+  </head>
+  <body>
+    <!-- Navigation menu -->
+
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="contactBtn">Direct email</a></li>
+        
+        <!-- theme toggle inside ul for mobile -->
+        
+        <li class="toggle-mobile">
+          <button id="modetoggleButton" class="modetoggle-btn">
+            <span id="modeIcon" class="mode-icon"></span>
+            <span id="modeText">Dark mode</span>
+        </button>
+      </li>
+      </ul>
+      <!-- hamburger icon -->
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      <!-- Desktop only theme toggle -->
+      <div class="theme-toggle desktop-toggle">
+        <button id="modetoggleButtonClone" class="modetoggle-btn">
+          <span id="modeIconClone" class="mode-icon"></span>
+          <span id="modeTextClone">Dark mode</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-name">Ayesha Farooq</h1>
+        <p>
+          Hi, I'm Ayesha- a self-taught Web Developer taking my first step toward becoming a Software Engineer. This portfolio is my very first solo project - built from scratch to showcase my leraning, creativity, and journey in web development.
+          <br>
+          <strong>It's not just a website; it's the beginning of a bigger dream</strong>
+        </p>
+        <a href="#work" class="btn" id="viewWorkBtn">View My Work</a>
+      </div>
+    </section>
+    <hr class="divider" />
+
+    <!--About section -->
+
+    <section id="about" class="about">
+      <h2>About me</h2>
+      <p>
+        I'm a Software Engineering graduate exploring the world of web development. This is my first step- a self-built portfolio that reflects my journey and passion for building websites.
+      </p>
+      <div id="moreText">
+        <p>After creating a web project in my final year, I realized my interest in web development.
+          So i decided to grow my skills through web development, which gave a strong foundation in HTML, CSS, Javascript, PHP, and their frameworks.
+        </p>
+        <p>
+          I also have basic understanding of C, C++, and python - but for now, my focus is on javascript and modern web technologies.
+          I am currently exploring opportunities for gaining real-wold experience.
+        </p>
+      </div>
+      <button id="seemorelesstoggleBtn">See More</button>
+    </section>
+    <hr class="divider" />
+
+    <!-- project section -->
+    <section id="projects" class="projects">
+      <h2>My Projects</h2>
+      <ul>
+        <li>Portfolio Websites using Html & CSS</li>
+        <li>Simple todo list using javascript</li>
+        <li>comming soon : personal blog with python backend</li>
+      </ul>
+    </section>
+    <hr class="divider" />
+
+    <!-- view my work -->
+     <section id="work" class="work-gallery">
+      <h2>My visual work</h2>
+        <div class="project-gallery">
+          <!-- project 1 -->
+          <div class="project-item">
+            <img src="your-project1" alt="project 1">
+            <div class="project-info">
+              <h3>Project Title</h3>
+              <p>short description</p>
+            </div>
+          </div>
+          <!-- project 2 -->
+          <div class="project-item">
+            <img src="your-project2" alt="project 2">
+            <div class="project-info">
+              <h3>Project Title</h3>
+              <p>short description</p>
+            </div>
+          </div>
+          <!-- project 3 -->
+          <div class="project-item">
+            <img src="your-project3" alt="project 3">
+            <div class="project-info">
+              <h3>Project Title</h3>
+              <p>short description</p>
+            </div>
+          </div>
+            <!-- more project items can be added the way -->
+        </div>
+     </section>
+
+     <!-- Modal structure for visual detailed work -->
+
+     <div id="projectModall" class="modall">
+      <div class="modall-content">
+        <span class="close-button">&times;</span>
+        <img id="modallImage" src="" alt="">
+        <div class="modall-description">
+          <h3 id="modallTitle">Project title</h3>
+          <p id="modallText">Details</p>
+        </div>
+      </div>
+     </div>
+     <hr class="divider" />
+
+      <!-- contact scroll section for other networks -->
+     
+    <section id="contact" class="contact-section">
+      <h2>Let's connect</h2>
+      <p>You can find me on these plateforms:</p>
+      <div class="social-links">
+        <a href="" target="_blank">Instagram</a>
+        <a href="" target="_blank">LinkedIn</a>
+        <a href="" target="_blank">Email</a>
+        <a href="" target="_blank">GitHub</a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+  
+    <!-- contact modal -->
+    
+     <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close">&times;</span>
+        <h2>Email</h2>
+        <form id="contactForm" action="">
+          <input id="name" type="text" placeholder="Your name" required><br>
+          <input id="email" type="text"  placeholder="Your email" required><br>
+          <textarea id="message" placeholder="Your message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p id="errorMessage" style="color: red;"></p>
+      </div>
+     </div>
+    <!-- Toast Popup Message -->
+<div id="popupMessage" class="popup-hidden">Thank you for contacting me!</div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy;2025 </p>
+    </footer>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
