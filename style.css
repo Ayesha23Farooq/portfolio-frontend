@@ -6,11 +6,14 @@ body {
   color: #333;
 }
 nav {
+  background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #222;
   padding: 10px 0;
   z-index: 1000;
 }
@@ -82,11 +85,13 @@ footer {
   font-weight: normal;
   font-style: italic;
 }
-/* light tmode -only apply when .darkmode class is not on body */
+/* light mode -only apply when .darkmode class is not on body */
 body:not(.dark-mode) strong {
-  font-style: italic;
+  color: #00bcd4;
   display: inline-block;
   margin-top: 10px;
+  font-weight: normal;
+  font-style: italic;
 }
 /* showing screen after click on nav items */
 #about,
@@ -157,7 +162,10 @@ body:not(.dark-mode) strong {
   color: #eee;
 }
 .dark-mode nav {
-  background-color: #111;
+ background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .dark-mode footer {
   background-color: #111;
@@ -202,9 +210,12 @@ body:not(.dark-mode) strong {
 }
 /* hero section */
 .hero {
+   background-image: url("https://images.unsplash.com/photo-1604964432806-254d07c11f32?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGV2ZWxvcGVyfGVufDB8fDB8fHww");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   height: 90vh;
-  background-color: (#ffffff);
-  color: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,6 +223,10 @@ body:not(.dark-mode) strong {
   padding: 80px 20px 20px 20px;
 }
 body.dark-mode .hero {
+  background-image: url("https://images.unsplash.com/photo-1604964432806-254d07c11f32?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGV2ZWxvcGVyfGVufDB8fDB8fHww");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   background-color: #111 !important;
   color: white !important;
 }
@@ -220,16 +235,17 @@ body.dark-mode .hero {
   margin-bottom: 10px;
 }
 .hero p {
+  color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 38px;
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 .btn {
-  background-color: #0c92a4;
   color: white;
+  border: 1px solid white;
   padding: 12px 25px;
-  border: none;
-  border-radius: 30px;
-  text-decoration: nono;
+  text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
 }

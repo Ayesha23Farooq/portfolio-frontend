@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Send data to backend
       try {
-        // 👇 Yeh block sirf temporary dumy testing ke liye hai
+        // 👇 Yeh block sirf temporary dumy testing ke liye hai jb real deployment ho tou isky delete kr dena or neechy wala real fetch use krna
         const fakeSuccess = true;
         if (fakeSuccess) {
            resetContactForm(); // 👈 Yeh line add karo for reseting call
