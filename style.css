@@ -7,9 +7,9 @@ body {
 }
 nav {
   background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
   left: 0;
@@ -162,10 +162,10 @@ body:not(.dark-mode) strong {
   color: #eee;
 }
 .dark-mode nav {
- background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .dark-mode footer {
   background-color: #111;
@@ -210,10 +210,10 @@ body:not(.dark-mode) strong {
 }
 /* hero section */
 .hero {
-   background-image: url("https://images.unsplash.com/photo-1604964432806-254d07c11f32?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGV2ZWxvcGVyfGVufDB8fDB8fHww");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("https://images.unsplash.com/photo-1604964432806-254d07c11f32?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGV2ZWxvcGVyfGVufDB8fDB8fHww");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 90vh;
   color: white;
   display: flex;
@@ -224,9 +224,9 @@ body:not(.dark-mode) strong {
 }
 body.dark-mode .hero {
   background-image: url("https://images.unsplash.com/photo-1604964432806-254d07c11f32?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGV2ZWxvcGVyfGVufDB8fDB8fHww");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: #111 !important;
   color: white !important;
 }
@@ -236,8 +236,8 @@ body.dark-mode .hero {
 }
 .hero p {
   color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 38px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 38px;
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
@@ -302,7 +302,10 @@ body.dark-mode .hero {
   justify-content: center;
 }
 .modal-content {
-  background: white;
+  background: rgba(0, 188, 212, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.15), 0 0 40px rgba(255, 255, 255, 0.1);
   margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
@@ -320,7 +323,7 @@ body.dark-mode .hero {
 }
 .modal-content h2 {
   margin-bottom: 20px;
-  color: #333;
+  color: white;
   text-align: center;
 }
 .modal-content input {
@@ -368,21 +371,21 @@ textarea.error {
 
 /* Popup Message Styling */
 #popupMessage {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #e0f7fa;
-    border-left: 5px solid #0097a7;
-    color: #004d40;
-    padding: 16px 32px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: none;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e0f7fa;
+  border-left: 5px solid #0097a7;
+  color: #004d40;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
 
 /* Show popup */
 .popup-visible {
@@ -399,7 +402,7 @@ textarea.error {
   background-color: #0097a7;
 }
 .close {
-  color: #333;
+  color: white;
   position: absolute;
   top: 15px;
   right: 20px;
@@ -409,7 +412,10 @@ textarea.error {
 }
 /* darkmode modal */
 body.dark-mode .modal-content {
-  background-color: #fff;
+  background: rgba(0, 188, 212, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
   color: #fff;
 }
 
