@@ -517,13 +517,14 @@ html {
   filter: blur(2px) brightness(0.7);
 }
 .project-info {
+  max-height: 80px;
+  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 20px;
   border-radius: 10px;
   transition: transform 0.4s ease;
   width: 80%;
